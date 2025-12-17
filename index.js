@@ -29,6 +29,12 @@ app.use(cors());
   }
 })();
 
+// home index
+
+app.get("/", (req, res) => {
+  res.json({ message: "succes create server", status: "okee" });
+});
+
 // route for check user
 
 app.get("/api/user", helmet(), cors(), async (req, res) => {
